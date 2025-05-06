@@ -33,6 +33,14 @@ html, body {
     padding: 0;
     overflow-x: hidden;
     box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: url(./assets/background-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 BODY{
