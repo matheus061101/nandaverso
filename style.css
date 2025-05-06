@@ -1,0 +1,271 @@
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box
+}
+/*
+:root{
+
+--text-color: #c2854c;
+--bg-url: url(./assets/bg-mobile-light.jpg);
+--stroke-color: #c2854c;
+--surface-color: rgba(255, 255, 255, 0.5);
+--socialhover-color: rgba(207, 180, 248, 0.189);
+--switch-bg-url: url(./assets/assets/sun.svg);
+}
+
+.Escuro{
+
+    --text-color: white;
+    --bg-url: url(./assets/bg-mobile.jpg);
+    --stroke-color: #76512f;
+    --surface-color: rgba(255, 255, 255, 0.108);
+    --socialhover-color: #76512f;
+    --switch-bg-url: url(./assets/assets/moon-stars.svg);
+
+}
+*/
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+BODY{
+        background-image: url(./assets/background-desktop.jpg);
+        background-repeat: no-repeat;
+        background-position: TOP center;
+        background-size: cover;
+        height: 100vh;
+}
+
+body * {
+
+    color: white
+}
+
+#container {
+    width: 100%;
+    max-width: 588px;
+    min-width: 250px;
+ padding: 24px;
+   margin: auto;
+ background-image: none;
+
+
+}
+
+/*profile */    
+
+#profile {
+    text-align: center;
+   
+   
+}
+
+#profile img {
+    margin-top: 56px;
+    width: 112px;
+    border-radius: 110%;
+
+}
+
+#profile p{color: var(--text-color);
+    margin-top: 8px;
+}
+
+p{
+display: block;
+font-weight: bold;
+font-size: large;
+}   
+
+a{ 
+
+    color: var(--text-color); 
+
+}
+
+/*switch*/
+#switch{
+position: relative;
+width: 64px;
+margin: 4px auto;
+margin-bottom: 16px;
+
+}
+#switch button{
+height: 32px;
+width: 32px;
+background: white var(--switch-bg-url) no-repeat  center;
+border-radius: 50%;
+border: 0;
+top: 50%;
+transform: translateY(-50%);
+position: absolute;
+z-index: 1;
+left: 0;
+
+animation: slide-back 0.3s forwards;
+
+}
+
+.Escuro #switch button{
+    
+    animation: slide-in 0.3s forwards;
+}
+
+
+#switch span{
+    border-radius: 9999px;
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    
+}
+
+/* list links */
+
+ul{
+    padding: 16px 24px;
+    list-style: none; 
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+   
+}
+   
+ul li a { 
+    
+   
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  height: 56px;
+
+    border: 1px solid #da588f;
+    background: rgba(255, 255, 255, 0.108);
+   border-radius: 500px;
+   border-right-width: 10px;
+   border-bottom-width: 10px;
+text-decoration: none;
+font-weight: 500;
+
+}
+
+footer {
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: var(--text-color );
+    margin-top: 16px;
+    font-size: 14px;
+}
+
+#cecilia-1 {
+    margin-left: 5px;
+}
+
+/* pseudo-selector */
+
+ul li a:hover {
+    
+    border: 1px solid #da588f ;
+    border-right-width: 5px;
+   border-bottom-width: 5px;
+}
+
+
+
+/* social-links */
+#social-links{
+
+    color:var(--text-color);
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    
+    margin-bottom: 16px;
+    font-size: 26px;
+    
+
+}
+
+#social-links a{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   padding: 10px;
+   transition: font-size .2s;
+  
+}
+
+#social-links a:hover{
+    background-color: #da588f;
+
+    
+    border-radius: 50%;
+}
+
+
+
+p#unico-1 {
+    
+    margin-top: 24px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: var(--text-color );
+    margin-top: 16px;
+    font-size: 10px;
+}
+
+#matheus-1{
+
+margin-left: 5px;
+
+}
+
+
+/* media queries*/
+
+@media (min-width: 700px) {
+body{
+    background-image: url(./assets/background-desktop.jpg);
+   
+}
+}
+
+
+/* animation */
+
+@keyframes slide-in {
+from {
+    left: 50%;
+}
+to {
+    left: 0;
+}
+}
+
+@keyframes slide-back {
+    from {
+        left: 0;
+    }
+    to 
+    {
+       left: 50%;
+    }
+}
